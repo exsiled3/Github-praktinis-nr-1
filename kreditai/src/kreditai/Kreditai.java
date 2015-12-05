@@ -95,18 +95,18 @@ public class Kreditai {
         int c = in.nextInt();
         System.out.println("Laikotarpis 50 metų - pastato amžius, bet ne daugiau 40 metų");
         int l = in.nextInt();
-        System.out.println("--------------------------------------------------------------");
-        System.out.println("                      Kredito skaiciuokle                     ");
-        System.out.println("--------------------------------------------------------------");
+        
+        spausdinkPavadinima("Kredito skaiciuokle");
+        
         System.out.println("Menesine imoka : ");
         setM(c / (l * 12));
         System.out.println(getM());
         System.out.println("Bendra grazintine suma : ");
         setB((c + (c * 13f / 100f)));
         System.out.println(getB());
-        System.out.println("--------------------------------------------------------------");
-        System.out.println("             Sutarties sudarimo apskaiciavimai                ");
-        System.out.println("--------------------------------------------------------------");
+        
+        spausdinkPavadinima("Sutarties sudarimo apskaiciavimai");
+        
         setT((200 * x));
         setT1(getM() + (getM() * 40f / 100f));
         //System.out.println("Menesine imoka 40%");
@@ -119,9 +119,9 @@ public class Kreditai {
         } else {
             System.out.println("Kreditas suteikiamas");
         }
-        System.out.println("--------------------------------------------------------------");
-        System.out.println("               Kredito grazinimo laikotarpis                  ");
-        System.out.println("--------------------------------------------------------------");
+        
+        spausdinkPavadinima("Kredito grazinimo laikotarpis");
+        
         setV(getB() / getM());
         System.out.println("Kredito grazinimas menesiais");
         System.out.println(getV());
@@ -143,18 +143,18 @@ public class Kreditai {
         int c = in.nextInt();
         System.out.println("Laikotarpis iki 5 metu");
         int l = in.nextInt();
-        System.out.println("--------------------------------------------------------------");
-        System.out.println("                      Kredito skaiciuokle                     ");
-        System.out.println("--------------------------------------------------------------");
+        
+        spausdinkPavadinima("Kredito skaiciuokle");
+        
         System.out.println("Menesine imoka : ");
         setM(c / (l * 12));
         System.out.println(getM());
         System.out.println("Bendra grazintine suma : ");
         setB(c + (c * 1f / 100f));
         System.out.println(b);
-        System.out.println("--------------------------------------------------------------");
-        System.out.println("             Sutarties sudarimo apskaiciavimai                ");
-        System.out.println("--------------------------------------------------------------");
+        
+        spausdinkPavadinima("Sutarties sudarimo apskaiciavimai");
+        
         setT(200 * x);
         setT1(getM() + (getM() * 40f / 100f));
         //System.out.println("Menesine imoka 40%");
@@ -167,9 +167,9 @@ public class Kreditai {
         } else {
             System.out.println("Kreditas suteikiamas");
         }
-        System.out.println("--------------------------------------------------------------");
-        System.out.println("               Kredito grazinimo laikotarpis                  ");
-        System.out.println("--------------------------------------------------------------");
+        
+        spausdinkPavadinima("Kredito grazinimo laikotarpis");
+        
         setV(getB() / getM());
         System.out.println("Kredito grazinimas menesiais");
         System.out.println(getV());
@@ -178,6 +178,14 @@ public class Kreditai {
         System.out.println("                                                              ");
     }
 
+    
+    public void spausdinkPavadinima(String pavadinimas){
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("                       " + pavadinimas + "                          ");
+        System.out.println("--------------------------------------------------------------");
+    }
+    
+    
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         char move;
